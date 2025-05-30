@@ -18,7 +18,6 @@ struct Transaksi {
     int totalHarga;
 };
 
-// ======================= FUNGSI TAMBAH MENU ========================
 void tambahMenu() {
     Menu m;
     cout << "\n-- Tambah Menu Baru --\n";
@@ -39,7 +38,6 @@ void tambahMenu() {
     }
 }
 
-// ======================= FUNGSI TAMPIL MENU ========================
 void tampilMenu() {
     Menu m;
     FILE* file = fopen("menu.dat", "rb");
@@ -58,7 +56,6 @@ void tampilMenu() {
     fclose(file);
 }
 
-// ======================= FUNGSI EDIT MENU ========================
 void editMenu() {
     char kode[10];
     cout << "Masukkan kode menu yang akan diedit: ";
@@ -96,7 +93,6 @@ void editMenu() {
     fclose(file);
 }
 
-// ======================= FUNGSI PESAN MENU ========================
 void pesanMenu() {
     char kode[10];
     int jumlah;
@@ -149,7 +145,6 @@ void pesanMenu() {
     }
 }
 
-// ======================= FUNGSI TAMPIL TRANSAKSI ========================
 void tampilTransaksi() {
     FILE* file = fopen("transaksi.dat", "rb");
     if (!file) {
@@ -169,7 +164,6 @@ void tampilTransaksi() {
     fclose(file);
 }
 
-// ======================= MENU UTAMA ========================
 void menuUtama() {
     int pilihan;
     do {
@@ -195,7 +189,6 @@ void menuUtama() {
     } while (pilihan != 0);
 }
 
-// ======================= MAIN ========================
 int main() {
     menuUtama();
     return 0;
